@@ -55,7 +55,7 @@ function toggleLang() {
 
 // === EMAILJS - Integração com formulário ===
 document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("YOUR_USER_ID"); // Substitua pelo seu User ID real
+  emailjs.init("ru_BCZJ25-KsZPmg6"); // Substitua pelo seu User ID real
 
   const form = document.getElementById("contact-form");
   if (form) {
