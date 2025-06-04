@@ -320,3 +320,15 @@ img {
     line-height: 36px;
   }
 }
+/* Hero específico para Aether X */
+.hero-aether {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/aether-x-front.jpg') center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 6rem;
+  position: relative;
+}
