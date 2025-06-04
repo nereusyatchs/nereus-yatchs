@@ -6,11 +6,15 @@
   <title>Aether X - Nereus Yatchs</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- AOS via CDN alternativo -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" 
+        integrity="sha512-ugMgFqE0z0gTjU5NAJJneYx1nYOJsfWfp6eTsAAZrCfOcF9aY6aYxFDwFFdDpsHUIcFA3Qxtxnyg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header com Imagem Fixa (sem slider) -->
   <header class="hero-aether" id="inicio">
     <div class="slides-aether" id="heroSlidesAether"></div>
 
@@ -19,7 +23,7 @@
       <div class="logo">Nereus Yatchs</div>
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#design">Design</a></li> 
+        <li><a href="#design">Design</a></li>    
         <li><a href="#interior">Interior</a></li>
         <li><a href="#cabine">Cabine</a></li>
         <li id="idioma"><button onclick="toggleLang()">EN/PT</button></li>
@@ -65,15 +69,19 @@
     <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão Voltar ao Topo -->
+  <!-- Botão Flutuante -->
   <a href="#inicio" class="back-to-top right" id="backToTop">↑</a>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <!-- AOS via cdnjs.cloudflare.com -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"  
+          integrity="sha512-aGxgFgNHmJcmE6b8PheqmqILbaipLkgo3E5c0fNdOjd2FWRxtdR+juY/" 
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     AOS.init({ duration: 800 });
   </script>
 
+  <!-- Scroll Event -->
   <script>
     window.addEventListener('scroll', () => {
       const btn = document.getElementById('backToTop');
@@ -81,6 +89,7 @@
     });
   </script>
 
+  <!-- Script Principal -->
   <script src="script.js"></script>
 </body>
 </html>
