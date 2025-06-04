@@ -14,7 +14,7 @@
   <header class="hero-aether" id="inicio">
     <div class="slides-aether" id="heroSlidesAether"></div>
 
-    <!-- Navegação Fixa no Topo -->
+    <!-- Navegação Fixa -->
     <nav class="navbar">
       <div class="logo">Nereus Yatchs</div>
       <ul class="menu">
@@ -65,20 +65,16 @@
     <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão Flutuante de Voltar ao Topo -->
+  <!-- Botão Voltar ao Topo -->
   <a href="#inicio" class="back-to-top right" id="backToTop">↑</a>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+    AOS.init({ duration: 800 });
   </script>
 
   <script>
-    // Mostrar botão ao rolar
     window.addEventListener('scroll', () => {
       const btn = document.getElementById('backToTop');
       btn.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
