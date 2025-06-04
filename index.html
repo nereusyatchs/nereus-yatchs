@@ -10,11 +10,11 @@
 </head>
 <body>
 
-  <!-- Header com Slider -->
+  <!-- Header -->
   <header class="hero-slider" id="inicio">
     <div class="slides" id="heroSlides"></div>
 
-    <!-- Navegação Fixa no Topo -->
+    <!-- Navegação Fixa -->
     <nav class="navbar">
       <div class="logo">Nereus Yatchs</div>
       <ul class="menu">
@@ -26,7 +26,7 @@
       </ul>
     </nav>
 
-    <!-- Conteúdo Centralizado -->
+    <!-- Conteúdo -->
     <div class="hero-content" data-aos="fade-up">
       <h1>O Futuro do Luxo Náutico</h1>
       <p>Projetos exclusivos de yatchs ultramodernos, meticulosamente criados para clientes exigentes.</p>
@@ -84,10 +84,10 @@
   <section id="contato" class="section dark">
     <div class="container" data-aos="fade-up">
       <h2>Agende uma Consulta Exclusiva</h2>
-      <form data-aos="zoom-in" data-aos-delay="200">
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu email" required />
-        <textarea placeholder="Mensagem"></textarea>
+      <form id="contact-form" data-aos="zoom-in" data-aos-delay="200">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" placeholder="Mensagem"></textarea>
         <button type="submit">Enviar</button>
       </form>
     </div>
@@ -98,20 +98,16 @@
     <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão Flutuante de Voltar ao Topo -->
+  <!-- Botão Flutuante -->
   <a href="#inicio" class="back-to-top" id="backToTop">↑</a>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+    AOS.init({ duration: 800 });
   </script>
 
   <script>
-    // Mostrar botão ao rolar para baixo
     window.addEventListener('scroll', () => {
       const btn = document.getElementById('backToTop');
       btn.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
@@ -119,35 +115,26 @@
   </script>
 
   <script src="script.js"></script>
-  
+
   <!-- Script do EmailJS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> 
-<script type="text/javascript">
-  // Inicialização do EmailJS com seu USER ID
-  (function () {
-    emailjs.init("nereus-yachts"); // Substitua por seu User ID real no painel do EmailJS
-  })();
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> 
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pelo seu User ID real
+    })();
 
-  // Função de envio do formulário
-  document
-    .querySelector("#contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault(); // Impede o recarregamento da página
-
-      // Envia os dados do formulário via EmailJS
-      emailjs.sendForm("nereus-yachts", "template_b6ab9ok", "#contact-form").then(
-        function (response) {
-          console.log("E-mail enviado com sucesso!", response.status, response.text);
-          alert("Sua mensagem foi enviada com sucesso!");
-          document.querySelector("#contact-form").reset(); // Limpa os campos
-        },
-        function (error) {
-          console.log("Erro ao enviar e-mail:", error);
-          alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
-        }
-      );
+    document.querySelector("#contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      emailjs.sendForm("nereus-yachts", "template_b6ab9ok", "#contact-form")
+        .then(function(response) {
+          alert("Mensagem enviada com sucesso!");
+          document.querySelector("#contact-form").reset();
+        }, function(error) {
+          alert("Erro ao enviar mensagem.");
+          console.log("ERRO:", error);
+        });
     });
-</script>
-  
+  </script>
+
 </body>
 </html>
