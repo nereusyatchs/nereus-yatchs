@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aether X - Nereus Yatchs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hero-aether" id="inicio">
+    <div class="slides-aether" id="heroSlidesAether"></div>
+
+    <!-- Navegação Fixa no Topo -->
+    <nav class="navbar">
+      <div class="logo">Nereus Yatchs</div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#design">Design</a></li> 
+        <li><a href="#interior">Interior</a></li>
+        <li><a href="#cabine">Cabine</a></li>
+        <li id="idioma"><button onclick="toggleLang()">EN/PT</button></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo Centralizado -->
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Aether X</h1>
+      <p>O yatch compacto que redefine o conceito de mobilidade marítima inteligente.</p>
+    </div>
+  </header>
+
+  <!-- Design -->
+  <section id="design" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Elegância em Movimento</h2>
+      <p>O Aether X é a perfeita fusão entre minimalismo estético e inovação funcional. Seu design exterior foi cuidadosamente esculpido por mestres designers náuticos, combinando linhas fluidas e aerodinâmicas com um perfil marcante e contemporâneo.</p>
+      <img src="assets/aether-x-front.jpg" alt="Frente do Aether X" class="full-img" />
+    </div>
+  </section>
+
+  <!-- Interior -->
+  <section id="interior" class="section dark">
+    <div class="container" data-aos="fade-up">
+      <h2>Conforto e Sofisticação</h2>
+      <p>O interior do Aether X reflete o luxo sem ostentação. Ambientes amplamente iluminados por luz natural, materiais nobres como couro italiano e acabamentos em carvalho escuro criam uma atmosfera única, ideal tanto para navegações curtas quanto para escapadas prolongadas no mar.</p>
+      <img src="assets/aether-x-int.jpg" alt="Interior do Aether X" class="full-img" />
+    </div>
+  </section>
+
+  <!-- Cabine -->
+  <section id="cabine" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Cabine de Comando Futurista</h2>
+      <p>A cabine de comando do Aether X é um verdadeiro centro tecnológico sobre as águas. Equipada com painéis digitais completos, controle centralizado e automação inteligente, tudo foi pensado para oferecer ao capitão o máximo de conforto, segurança e precisão durante qualquer tipo de navegação.</p>
+      <img src="assets/aether-x-cabine.jpg" alt="Cabine do Aether X" class="full-img" />
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão Flutuante de Voltar ao Topo -->
+  <a href="#inicio" class="back-to-top right" id="backToTop">↑</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+  <script>
+    // Mostrar botão ao rolar
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      btn.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

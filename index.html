@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nereus Yatchs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Header com Slider -->
+  <header class="hero-slider" id="inicio">
+    <div class="slides" id="heroSlides"></div>
+
+    <!-- Navegação Fixa no Topo -->
+    <nav class="navbar">
+      <div class="logo">Nereus Yatchs</div>
+      <ul class="menu">
+        <li><a href="#sobre">Sobre</a></li> 
+        <li><a href="#modelos">Modelos</a></li>
+        <li><a href="#tecnologia">Tecnologia</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li id="idioma"><button onclick="toggleLang()">EN/PT</button></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo Centralizado -->
+    <div class="hero-content" data-aos="fade-up">
+      <h1>O Futuro do Luxo Náutico</h1>
+      <p>Projetos exclusivos de yatchs ultramodernos, meticulosamente criados para clientes exigentes.</p>
+    </div>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Sobre Nós</h2>
+      <p id="sobre-text">Na Nereus Yatchs, não construímos apenas embarcações — criamos verdadeiras experiências de luxo sobre as águas. Cada yatch é uma obra única, concebida por engenheiros náuticos renomados e designers visionários, combinando tecnologia avançada e requinte estético.</p>
+    </div>
+  </section>
+
+  <!-- Modelos -->
+  <section id="modelos" class="section dark">
+    <div class="container" data-aos="fade-up">
+      <h2>Conheça Nossos Modelos</h2>
+
+      <div class="modelo-grid" data-aos="fade-left">
+        <div class="modelo-left">
+          <h3>Aether X</h3>
+          <p class="descricao-modelo">O yatch compacto que redefine o conceito de mobilidade marítima inteligente. Com design minimalista e tecnologia de ponta, o Aether X é ideal para quem busca performance e elegância em qualquer tipo de navegação.</p>
+        </div>
+        <div class="modelo-right">
+          <a href="aether-x.html">
+            <img src="assets/aether-x.jpg" alt="Aether X" />
+          </a>
+        </div>
+      </div>
+
+      <div class="modelo-grid reverse" data-aos="fade-right">
+        <div class="modelo-left">
+          <h3>Vega Z</h3>
+          <p class="descricao-modelo">Um yatch gigante de última geração, projetado para clientes que buscam o topo do topo. O Vega Z oferece um interior personalizável, automação completa e um nível de conforto sem precedentes, mesmo nas longas navegações.</p>
+        </div>
+        <div class="modelo-right">
+          <a href="vega-z.html">
+            <img src="assets/vega-z.jpg" alt="Vega Z" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologia -->
+  <section id="tecnologia" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Tecnologia e Inovação</h2>
+      <p id="tecnologia-text">Cada yatch Nereus é uma síntese de inovação e excelência náutica. Projetados com materiais ultraleves e extremamente resistentes, nossos modelos incorporam inteligência artificial, sistemas avançados de energia limpa e conectividade completa, oferecendo uma experiência a bordo sem precedentes — tecnológica, intuitiva e profundamente luxuosa.</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section dark">
+    <div class="container" data-aos="fade-up">
+      <h2>Agende uma Consulta Exclusiva</h2>
+      <form data-aos="zoom-in" data-aos-delay="200">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu email" required />
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão Flutuante de Voltar ao Topo -->
+  <a href="#inicio" class="back-to-top" id="backToTop">↑</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+  <script>
+    // Mostrar botão ao rolar para baixo
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      btn.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

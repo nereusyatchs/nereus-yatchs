@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vega Z - Nereus Yatchs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hero-vega" id="inicio">
+    <div class="slides-vega" id="heroSlidesVega"></div>
+
+    <!-- Navegação Fixa no Topo -->
+    <nav class="navbar">
+      <div class="logo">Nereus Yatchs</div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#design">Design</a></li> 
+        <li><a href="#interior">Interior</a></li>
+        <li><a href="#cabine">Cabine</a></li>
+        <li id="idioma"><button onclick="toggleLang()">EN/PT</button></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo Centralizado -->
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Vega Z</h1>
+      <p>O yatch gigante que redefine o conceito de luxo marítimo com tecnologia de ponta.</p>
+    </div>
+  </header>
+
+  <!-- Design -->
+  <section id="design" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Um Monólito Futurista sobre as Águas</h2>
+      <p>O Vega Z é a expressão máxima do design náutico contemporâneo. Cada curva e linha foi meticulosamente esculpida para transmitir poder, elegância e sofisticação. Sua proa imponente, combinada com um perfil aerodinâmico e detalhes em fibra de carbono, fazem dele não apenas uma embarcação, mas uma verdadeira obra de arte em movimento.</p>
+      <img src="assets/vega-z-front.jpg" alt="Frente do Vega Z" class="full-img" />
+    </div>
+  </section>
+
+  <!-- Interior -->
+  <section id="interior" class="section dark">
+    <div class="container" data-aos="fade-up">
+      <h2>Espaço Projetado para o Máximo Conforto</h2>
+      <p>O interior do Vega Z é uma celebração ao luxo sem limites. Com ambientes amplos, iluminação natural abundante e acabamentos personalizados, cada detalhe reflete o cuidado extremo na escolha dos materiais: couro italiano, madeiras nobres e superfícies metálicas escovadas criam uma atmosfera única, ideal tanto para entretenimento quanto para descanso em alto-mar.</p>
+      <img src="assets/vega-z-int.jpg" alt="Interior do Vega Z" class="full-img" />
+    </div>
+  </section>
+
+  <!-- Cabine -->
+  <section id="cabine" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Cabine de Comando Intuitiva e Avançada</h2>
+      <p>A cabine de comando do Vega Z é um centro tecnológico sobre as águas. Equipada com sistemas de navegação totalmente digitais, automação inteligente e controle centralizado, oferece ao capitão precisão absoluta, segurança total e conforto incomparável — tudo isso com um design minimalista e futurista.</p>
+      <img src="assets/vega-z-cabine.jpg" alt="Cabine do Vega Z" class="full-img" />
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão Flutuante de Voltar ao Topo -->
+  <a href="#inicio" class="back-to-top right" id="backToTop">↑</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+  <script>
+    // Mostrar botão ao rolar
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      btn.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
