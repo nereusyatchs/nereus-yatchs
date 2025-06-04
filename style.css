@@ -369,3 +369,20 @@ footer {
     line-height: 36px;
   }
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.modelo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .modelo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
