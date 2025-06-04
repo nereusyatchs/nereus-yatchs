@@ -332,3 +332,15 @@ img {
   padding-top: 6rem;
   position: relative;
 }
+/* Hero específico para Vega Z */
+.hero-vega {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/vega-z-front.jpg') center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 6rem;
+  position: relative;
+}
