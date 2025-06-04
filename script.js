@@ -45,3 +45,4 @@ function toggleLang() {
 
   // Atualiza os textos dinamicamente aqui...
 }
+emailjs.sendForm("nereus-yachts", "template_abc123", "#contact-form")
