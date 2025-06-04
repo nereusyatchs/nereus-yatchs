@@ -6,11 +6,15 @@
   <title>Vega Z - Nereus Yatchs</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-ugMgFqE0z0gTjU5NAJJneYx1nYOJsfWfp6eTsAAZrCfOcF9aY6aYxFDwFFdDpsHUIcFA3Qxtxnyg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header com Imagem Fixa -->
   <header class="hero-vega" id="inicio">
     <div class="slides-vega" id="heroSlidesVega"></div>
 
@@ -19,7 +23,7 @@
       <div class="logo">Nereus Yatchs</div>
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#design">Design</a></li> 
+        <li><a href="#design">Design</a></li>    
         <li><a href="#interior">Interior</a></li>
         <li><a href="#cabine">Cabine</a></li>
         <li id="idioma"><button onclick="toggleLang()">EN/PT</button></li>
@@ -37,7 +41,7 @@
   <section id="design" class="section">
     <div class="container" data-aos="fade-up">
       <h2>Um Monólito Futurista sobre as Águas</h2>
-      <p>O Vega Z é a expressão máxima do design náutico contemporâneo. Cada curva e linha foi meticulosamente esculpida para transmitir poder, elegância e sofisticação. Sua proa imponente, combinada com um perfil aerodinâmico e detalhes em fibra de carbono, fazem dele não apenas uma embarcação, mas uma verdadeira obra de arte em movimento.</p>
+      <p>O Vega Z é a expressão máxima do design náutico contemporâneo. Cada curva e linha foi meticulosamente esculpida para transmitir poder, elegância e sofisticação...</p>
       <img src="assets/vega-z-front.jpg" alt="Frente do Vega Z" class="full-img" />
     </div>
   </section>
@@ -46,7 +50,7 @@
   <section id="interior" class="section dark">
     <div class="container" data-aos="fade-up">
       <h2>Espaço Projetado para o Máximo Conforto</h2>
-      <p>O interior do Vega Z é uma celebração ao luxo sem limites. Ambientes amplos, iluminação natural abundante e acabamentos personalizados refletem o cuidado extremo na escolha dos materiais: couro italiano, madeiras nobres e superfícies metálicas escovadas criam uma atmosfera única, ideal tanto para entretenimento quanto para descanso em alto-mar.</p>
+      <p>O interior do Vega Z é uma celebração ao luxo sem limites. Ambientes amplos, iluminação natural abundante e acabamentos personalizados refletem o cuidado extremo na escolha dos materiais...</p>
       <img src="assets/vega-z-int.jpg" alt="Interior do Vega Z" class="full-img" />
     </div>
   </section>
@@ -55,7 +59,7 @@
   <section id="cabine" class="section">
     <div class="container" data-aos="fade-up">
       <h2>Cabine de Comando Intuitiva e Avançada</h2>
-      <p>A cabine de comando do Vega Z é um centro tecnológico sobre as águas. Equipada com sistemas de navegação totalmente digitais, automação inteligente e controle centralizado, oferece ao capitão precisão absoluta, segurança total e conforto incomparável — tudo isso com um design minimalista e futurista.</p>
+      <p>A cabine de comando do Vega Z é um centro tecnológico sobre as águas. Equipada com sistemas de navegação totalmente digitais, automação inteligente e controle centralizado...</p>
       <img src="assets/vega-z-cabine.jpg" alt="Cabine do Vega Z" class="full-img" />
     </div>
   </section>
@@ -65,15 +69,19 @@
     <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão Voltar ao Topo -->
+  <!-- Botão Flutuante -->
   <a href="#inicio" class="back-to-top right" id="backToTop">↑</a>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+  <!-- AOS via cdnjs.cloudflare.com -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" 
+          integrity="sha512-aGxgFgNHmJcmE6b8PheqmqILbaipLkgo3E5c0fNdOjd2FWRxtdR+juY/"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     AOS.init({ duration: 800 });
   </script>
 
+  <!-- Scroll Event -->
   <script>
     window.addEventListener('scroll', () => {
       const btn = document.getElementById('backToTop');
@@ -81,6 +89,7 @@
     });
   </script>
 
+  <!-- Script Principal -->
   <script src="script.js"></script>
 </body>
 </html>
