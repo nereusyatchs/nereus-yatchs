@@ -14,7 +14,7 @@
   <header class="hero-vega" id="inicio">
     <div class="slides-vega" id="heroSlidesVega"></div>
 
-    <!-- Navegação Fixa no Topo -->
+    <!-- Navegação Fixa -->
     <nav class="navbar">
       <div class="logo">Nereus Yatchs</div>
       <ul class="menu">
@@ -46,7 +46,7 @@
   <section id="interior" class="section dark">
     <div class="container" data-aos="fade-up">
       <h2>Espaço Projetado para o Máximo Conforto</h2>
-      <p>O interior do Vega Z é uma celebração ao luxo sem limites. Com ambientes amplos, iluminação natural abundante e acabamentos personalizados, cada detalhe reflete o cuidado extremo na escolha dos materiais: couro italiano, madeiras nobres e superfícies metálicas escovadas criam uma atmosfera única, ideal tanto para entretenimento quanto para descanso em alto-mar.</p>
+      <p>O interior do Vega Z é uma celebração ao luxo sem limites. Ambientes amplos, iluminação natural abundante e acabamentos personalizados refletem o cuidado extremo na escolha dos materiais: couro italiano, madeiras nobres e superfícies metálicas escovadas criam uma atmosfera única, ideal tanto para entretenimento quanto para descanso em alto-mar.</p>
       <img src="assets/vega-z-int.jpg" alt="Interior do Vega Z" class="full-img" />
     </div>
   </section>
@@ -65,20 +65,16 @@
     <p>&copy; 2025 Nereus Yatchs. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão Flutuante de Voltar ao Topo -->
+  <!-- Botão Voltar ao Topo -->
   <a href="#inicio" class="back-to-top right" id="backToTop">↑</a>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+    AOS.init({ duration: 800 });
   </script>
 
   <script>
-    // Mostrar botão ao rolar
     window.addEventListener('scroll', () => {
       const btn = document.getElementById('backToTop');
       btn.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
