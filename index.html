@@ -119,5 +119,35 @@
   </script>
 
   <script src="script.js"></script>
+  
+  <!-- Script do EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> 
+<script type="text/javascript">
+  // Inicialização do EmailJS com seu USER ID
+  (function () {
+    emailjs.init("nereus-yachts"); // Substitua por seu User ID real no painel do EmailJS
+  })();
+
+  // Função de envio do formulário
+  document
+    .querySelector("#contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Impede o recarregamento da página
+
+      // Envia os dados do formulário via EmailJS
+      emailjs.sendForm("nereus-yachts", "template_b6ab9ok", "#contact-form").then(
+        function (response) {
+          console.log("E-mail enviado com sucesso!", response.status, response.text);
+          alert("Sua mensagem foi enviada com sucesso!");
+          document.querySelector("#contact-form").reset(); // Limpa os campos
+        },
+        function (error) {
+          console.log("Erro ao enviar e-mail:", error);
+          alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+        }
+      );
+    });
+</script>
+  
 </body>
 </html>
