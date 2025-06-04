@@ -281,3 +281,91 @@ footer {
 .back-to-top:hover {
   background-color: #eab308;
 }
+/* === RESPONSIVIDADE GERAL === */
+
+/* Layout mobile-first */
+@media (max-width: 768px) {
+  .modelo-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .modelo-left,
+  .modelo-right {
+    width: 100%;
+  }
+
+  .modelo-right img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tela pequena (celular em modo retrato) */
+@media (max-width: 480px) {
+  .hero-slider,
+  .hero-aether,
+  .hero-vega {
+    padding-top: 4rem;
+    height: auto;
+    min-height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .modelo-grid {
+    gap: 1.5rem;
+  }
+
+  .descricao-modelo {
+    text-align: center;
+  }
+
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    line-height: 36px;
+  }
+}
